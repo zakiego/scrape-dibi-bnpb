@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun run src/index.ts",
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 bun run src/index.ts",
     "dev": "bun run --watch src/index.ts",
     "db:push": "drizzle-kit push:sqlite",
     "db:studio": "drizzle-kit studio",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "better-sqlite3": "^9.3.0",
+    "cheerio": "^1.0.0-rc.12",
     "drizzle-orm": "^0.29.3",
     "pino": "^8.17.2",
     "pino-pretty": "^10.3.1",
